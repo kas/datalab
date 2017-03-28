@@ -20,6 +20,9 @@ def normalize(imgs):
         im = im / 112.5 # [0, 2]
         im -= 1 # [-1, 1]
 
-        yield (im, ''.join(imgs[0].split('/')[-2:]))
+        yield (im, ''.join(img.split('/')[-2:]))
 
-print(next(normalize(imgs)))
+normalized_imgs = normalize(imgs)
+
+for normalized_img in normalized_imgs:
+    print(normalized_img)
