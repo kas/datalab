@@ -17,7 +17,7 @@ def normalize(imgs):
     for img in imgs:
         im = cv2.imread(img)
         
-        im = im / 112.5 # [0, 2]
+        im = im / 127.5 # [0, 2]
         im -= 1 # [-1, 1]
 
         yield (im, ''.join(img.split('/')[-2:]))
