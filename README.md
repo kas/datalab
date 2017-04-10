@@ -1,4 +1,4 @@
-# datalab
+# datalab-init
 
 To run this program, cd to the project root and run these commands:
 
